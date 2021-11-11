@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id='submit-form'>
+        <div class="container mt-4 label border-bottom border-2 border-dark" id="header">
+            <div class="column " >
+                <div class="col-md-12" id="fullName">
+                    <label for="fname" class="attr">Full name:</label>
+                    <input typr="text" class="input" name="fname"  id="fname" placeholder="Enter your full Name">
+                </div>
+
+                <div class="col-md-12" id="address">
+                    <label for="street" class="attr">Address:</label>
+                    <input typr="text" class="input" name="street"  id="street" placeholder="Enter your Number of build, Name of Street, and Number of Appartmnet (if you have)">
+                </div>
+
+                <div class="col-md-12" id="cityStateZIP">
+                    <label for="city" class="attr">City:</label>
+                    <input typr="text" class="input" name="city"  id="city" placeholder="Enter your Name of City">
+                    ,
+                    <label for="state" class="attr">State:</label>
+                    <input typr="text" class="input" name="state"  id="state" placeholder="Enter your State">
+
+                    <label for="zip" class="attr">ZIP Code:</label>
+                    <input typr="text" class="input" name="zip"  id="zip" placeholder="Enter your ZIP code">
+                </div>
+
+                <div class="col-md-12" id="emailBox">
+                    <label for="email" class="attr">Email address:</label>
+                    <input typr="text" class="input" name="email" id="email" placeholder="Enter your email"><br class="attr">
+                    <small id="exampleEmail" class="attr form-text text-muted">Example: name@gmail.com</small>
+                </div>
+
+                <div class="col-md-12 mb-2" id="telBox">
+                    <label for="tel" class="attr">Phone Number:</label>
+                    <input typr="text" class="input" name="tel" id="tel" placeholder="Enter your Phone Number"><br>
+                    <small id="exampleTel" class="attr form-text text-muted">Example: 777-777-7777</small>
+                </div>
+                <br><br>
+                <div class="col-md-12 mb-2">
+                    <div id="photo">
+                    <label for="fileUpload" class="attr label"> File input</label><br>
+                    <input class="attr" type="file" id="fileUpload"> <br>
+                    <small class="attr form-text text-muted">You can upload images of .jpg files if necessary</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="column">
+                <div class="col-md-12 form-group pt-4"> 
+                    <label for="objective" class="label text-decoration-underline" id="object">Objective:</label>
+                    <textarea class="form-control" id="objective" rows="3" placeholder="Example: To obtain a position as an/a .... "></textarea>
+                </div>
+
+                <div class="col-md-12 form-group pt-4"> 
+                    <label for="summary" class="label text-decoration-underline" id="prSum">Professional Summary:</label>
+                    <textarea class="form-control" id="summary" rows="5" placeholder="Example: Proficient in Microsoft Office, etc.... "></textarea>
+                </div>
+                
+                <div class="col-md-12 form-group pt-4"> 
+                    <label for="summary" class="label text-decoration-underline" id="techCer">Technical Skills/Certifications:</label>
+                    <textarea class="form-control" id="summary" rows="10" placeholder="Example: Certifications (Name, Date of finish), Programming languages.... "></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" id="educationContainer">
+            <div class="mt-4 fw-bold text-decoration-underline">Education:</div>
+            <div class="row" id="education">
+                <div class="col-md-3 mt-4">
+                    <label for="dateEnd" class="attr">Date of end:</label>
+                    <input type="date" class="input" name="dateEnd" id="dateEnd">
+                </div>
+                <div class="col-md-5">
+                    <label for="college" class="attr">Name of College:</label>
+                    <input typr="text" class="input" name="college" id="college" placeholder="Enter your name of college"><br>
+                    <label for="degree" class="attr">Degree:</label><br>
+                    <input typr="text" class="input" name="degree" id="degree" placeholder="Enter your degree"><br>
+                    <label for="program" class="attr">Program:</label><br>
+                    <input typr="text" class="input" name="program" id="program" placeholder="Enter your program">
+                </div>
+                <div class="col-md-3">
+                    <label for="cityCountry" class="attr">City, Counrty:</label>
+                    <input typr="text" class="input" name="cityCountry"  id="cityCountry" placeholder="Enter city and Country of college">
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4">
+            <div class="column" >
+                <div class="col-12-md">
+                    <button type="submit" class="attr btn btn-primary" onclick="myAdd()">Add</button>
+                    <button type="submit" class="attr btn btn-primary" onclick="myDelete()">Delete</button>
+                </div> 
+            </div>
+        </div>
+
+        <div class="container" id="workContainer">
+            <div class="mt-4 fw-bold text-decoration-underline">Work expience:</div>
+            <div class="row mt-4" id="work">
+                <div class="col-md-3 mt-4">
+                    <label for="dateBeg1" class="attr">Date of begin:</label>
+                    <input type="date" class="input" name="dateBeg1" id="dateBeg1">-
+                    <label for="dateEnd1" class="attr end1">Date of end:</label>
+                    <input type="date" class="input" name="dateEnd1" id="dateEnd1"><br>
+                    <input type="checkbox" class="current" name="job" id="currentWork" value="currentWork" onclick="PresentJob()">
+                    <label id="current" for="currentWork">Present Work</label>
+                </div>
+                <div class="col-md-5">
+                    <label for="employer" class="attr">Name of Employer:</label>
+                    <input typr="text" class="input" name="employer" id="employer" placeholder="Enter your name of Employer"><br>
+                    <label for="position" class="attr">Position:</label><br>
+                    <input typr="text" class="input" name="position" id="position" placeholder="Enter your position"><br>
+                    <label for="duty" class="label attr" id="duties">Duties:</label>
+                    <textarea class="form-control" id="duty" rows="20" placeholder="Example: •	To ensure that technical service projects are completed, efficiently and effectively"></textarea>
+                </div>
+                <div class="col-md-3">
+                    <label for="cityCountry1" class="attr">City, Counrty:</label>
+                    <input typr="text" class="input" name="cityCountry1"  id="cityCountry1" placeholder="Enter city and Country of Employer">
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+            <div class="column" >
+                <div class="col-12-md">
+                    <button type="submit" class="attr btn btn-primary" onclick="myAdd1()">Add</button>
+                    <button type="submit" class="attr btn btn-primary" onclick="myDelete1()">Delete</button>
+                </div> 
+            </div>
+        </div>
+
+        <div class="container" id="referanceContainer">
+            <div class="mt-4 fw-bold text-decoration-underline">Reference:</div>
+            <div class="row" id="referance">
+                <div class="col-md-12 mt-4">
+                    <ul>
+                        <li>
+                            <label for="rposition" class="attr">Position:</label>
+                            <input typr="text" class="input mt-4" name="rposition" id="rposition" placeholder="Enter referal position"><br>
+                        </li>
+                        <li>
+                            <label for="rname" class="attr">Full name:</label>
+                            <input typr="text" class="input mt-4" name="rname"  id="rname" placeholder="Enter referal full Name">
+                        </li>
+                        <li>
+                            <label for="rtel" class="attr">Phone Number:</label>
+                            <input typr="text" class="input mt-4" name="rtel" id="rtel" placeholder="Enter referal Phone Number"><br>
+                            <small id="exampleTel1" class="attr rtel form-text text-muted">Example: 777-777-7777</small>
+                        </li>
+                        <li>
+                            <label for="remail" class="attr">Email address:</label>
+                            <input typr="text" class="input mt-4" name="remail" id="remail" placeholder="Enter your email"><br class="attr">
+                            <small id="exampleEmail1" class="attr remail form-text text-muted">Example: name@gmail.com</small>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+            <div class="column" >
+                <div class="col-12-md">
+                    <button type="submit" class="attr btn btn-primary" onclick="myAdd2()">Add</button>
+                    <button type="submit" class="attr btn btn-primary" onclick="myDelete2()">Delete</button>
+                </div> 
+            </div>
+        </div>
+
+        <div class="container mt-4 ">
+            <div class="column" >
+                <div class="col-12-md">
+                    <div class="form-group" id="submitButtons">
+                        <button type="submit" class="attr btn btn-primary me-4 mb-5" onclick="myPrint()">Print</button>
+                        <button type="submit" class="attr btn btn-primary mb-5" onclick="myView()">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div id="myProgress">
+        <div id="myBar"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

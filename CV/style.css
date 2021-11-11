@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+#header, #submitButtons {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100%;
+}
+
+#fname{
+    text-align: center;
+    width: 20em;
+    font-size: 150%;
+}
+
+#street, #email, #tel{
+    margin-top: 2%;
+    width: 30em;
+    text-align: center;
+}
+
+#cityStateZIP{
+    margin-top: 2%;
+}
+
+#city{
+    text-align: right;
+    width: 15em;
+}
+
+#state{
+    width: 2em;
+}
+
+#exampleEmail,#exampleTel{
+    margin-left: 17%;
+}
+
+#exampleEmail1,#exampleTel1{
+    margin-left: 10%;
+}
+
+#photo{
+    position: absolute;
+    top: 30px;
+    right: 100px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid none;
+}
+
+#object, #prSum,#techCer{
+    font-weight: bold;
+}
+
+#dateBeg, #dateEnd{
+    width: 130px;
+}
+
+#college,#program,#degree,#cityCountry,#employer,#position,#remail,#rtel,#rname,#rposition{
+    width: 330px; 
+}
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+  }
+  
+  #myBar {
+    width: 1%;
+    height: 30px;
+    background-color: green;
+  }
