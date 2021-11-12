@@ -45,7 +45,7 @@ html, body {
 }
 
 #exampleEmail1,#exampleTel1{
-    margin-left: 10%;
+    margin-left: 12%;
 }
 
 #photo{
@@ -57,7 +57,7 @@ html, body {
     border: 1px solid none;
 }
 
-#object, #prSum,#techCer{
+#object, #prSum,#techCerT{
     font-weight: bold;
 }
 

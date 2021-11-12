@@ -71,8 +71,8 @@
                 </div>
                 
                 <div class="col-md-12 form-group pt-4"> 
-                    <label for="summary" class="label text-decoration-underline" id="techCer">Technical Skills/Certifications:</label>
-                    <textarea class="form-control" id="summary" rows="10" placeholder="Example: Certifications (Name, Date of finish), Programming languages.... "></textarea>
+                    <label for="techCer" class="label text-decoration-underline" id="techCerT">Technical Skills/Certifications:</label>
+                    <textarea class="form-control" id="techCer" rows="10" placeholder="Example: Certifications (Name, Date of finish), Programming languages.... "></textarea>
                 </div>
             </div>
         </div>
@@ -146,23 +146,20 @@
             <div class="mt-4 fw-bold text-decoration-underline">Reference:</div>
             <div class="row" id="referance">
                 <div class="col-md-12 mt-4">
-                    <ul>
+                    <ul id="referance1">
                         <li>
-                            <label for="rposition" class="attr">Position:</label>
-                            <input typr="text" class="input mt-4" name="rposition" id="rposition" placeholder="Enter referal position"><br>
-                        </li>
-                        <li>
-                            <label for="rname" class="attr">Full name:</label>
-                            <input typr="text" class="input mt-4" name="rname"  id="rname" placeholder="Enter referal full Name">
-                        </li>
-                        <li>
-                            <label for="rtel" class="attr">Phone Number:</label>
-                            <input typr="text" class="input mt-4" name="rtel" id="rtel" placeholder="Enter referal Phone Number"><br>
-                            <small id="exampleTel1" class="attr rtel form-text text-muted">Example: 777-777-7777</small>
-                        </li>
-                        <li>
-                            <label for="remail" class="attr">Email address:</label>
-                            <input typr="text" class="input mt-4" name="remail" id="remail" placeholder="Enter your email"><br class="attr">
+                            <label for="rposition" ">Position:</label>
+                            <input typr="text" class="input" name="rposition" id="rposition" placeholder="Enter referal position"><br>
+
+                            <label for="rname" >Full name:</label>
+                            <input typr="text" class="input  mt-1" name="rname"  id="rname" placeholder="Enter referal full Name"><br>
+
+                            <label for="rtel" >Phone Number:</label>
+                            <input typr="text" class="input  mt-1" name="rtel" id="rtel" placeholder="Enter referal Phone Number"><br class="attr">
+                            <small id="exampleTel1" class="attr rtel form-text text-muted">Example: 777-777-7777</small><br>
+
+                            <label for="remail" >Email address:</label>
+                            <input typr="text" class="input  mt-1" name="remail" id="remail" placeholder="Enter your email"><br class="attr">
                             <small id="exampleEmail1" class="attr remail form-text text-muted">Example: name@gmail.com</small>
                         </li>
                     </ul>
@@ -184,7 +181,8 @@
                 <div class="col-12-md">
                     <div class="form-group" id="submitButtons">
                         <button type="submit" class="attr btn btn-primary me-4 mb-5" onclick="myPrint()">Print</button>
-                        <button type="submit" class="attr btn btn-primary mb-5" onclick="myView()">View</button>
+                        <button type="submit" class="attr btn btn-primary me-4 mb-5" onclick="myView()">View</button>
+                        <button type="submit" class="attr btn btn-primary mb-5" onclick="myResume()">Resume Andriy Martynyshyn</button>
                     </div>
                 </div>
             </div>
